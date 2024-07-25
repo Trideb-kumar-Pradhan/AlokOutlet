@@ -19,6 +19,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await axios.get('https://outletsp.onrender.com/products'); 
+        console.log(responce.data);
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
