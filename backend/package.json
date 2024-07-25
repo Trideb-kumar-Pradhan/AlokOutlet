@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-        "test": "react-scripts test --env=jsdom",
+    "start": "node server.js",
+    "test": "react-scripts test --env=jsdom",
     "build": "react-scripts build"
   },
   "keywords": [],
@@ -20,5 +20,8 @@
     "nodemailer": "^6.9.14",
     "nodemon": "^3.1.4",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
