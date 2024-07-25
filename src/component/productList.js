@@ -72,7 +72,7 @@ const ProductList = ({ addToCart }) => {
                 component="img"
                 height="100%"
                 width="100%"
-                src={`http://localhost:8000/images/${product.image}`} // Image URL from backend
+                src={`https://outletsp.onrender.com/images/${product.image}`} // Image URL from backend
                 alt={product.name}
                 style={{ objectFit: 'cover', cursor: 'pointer' }}
                 onClick={() => handleImageClick(`https://outletsp.onrender.com/images/${product.image}`)}
