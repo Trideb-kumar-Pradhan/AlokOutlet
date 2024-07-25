@@ -84,7 +84,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
     }));
 
     try {
-      const response = await axios.post('http://localhost:8000/submit-order', {
+      const response = await axios.post('https://outletsp.onrender.com/submit-order', {
         ...formData,
         name: formattedName,
         address: formattedAddress,

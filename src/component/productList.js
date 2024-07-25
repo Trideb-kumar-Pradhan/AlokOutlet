@@ -14,7 +14,7 @@ const ProductList = ({ addToCart }) => {
     // Fetch products from backend when component mounts
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/products');
+        const response = await axios.get('https://outletsp.onrender.com/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
