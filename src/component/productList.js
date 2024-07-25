@@ -14,7 +14,7 @@ const ProductList = ({ addToCart }) => {
     // Fetch products from backend when component mounts
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/products');
+        const response = await axios.get('https://outletsp.onrender.com/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -75,7 +75,7 @@ const ProductList = ({ addToCart }) => {
                 src={`http://localhost:8000/images/${product.image}`} // Image URL from backend
                 alt={product.name}
                 style={{ objectFit: 'cover', cursor: 'pointer' }}
-                onClick={() => handleImageClick(`http://localhost:8000/images/${product.image}`)}
+                onClick={() => handleImageClick(`https://outletsp.onrender.com/images/${product.image}`)}
               />
               <CardContent sx={{ justifyContent: 'center', display: 'flex', flexDirection: 'column', paddingLeft: '10px', paddingTop: '0px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
