@@ -209,7 +209,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
 
       {orderSubmitted && (
         <Alert severity="success" style={{ marginTop: '10px' }}>
-          Order submitted successfully!
+          Order submitted successfully!!
         </Alert>
       )}
 
