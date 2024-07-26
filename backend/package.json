@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "react-scripts test --env=jsdom",
     "build": "react-scripts build"
   },

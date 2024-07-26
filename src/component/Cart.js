@@ -67,6 +67,27 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
       setError('You cannot buy more than 5 products in a day');
       return;
     }
+ 
+    const empcodePattern = /^4\d{7}$/;
+
+    if (!empcodePattern.test(formData.empcode)) {
+      setError('EMPCode must be start with 4.');
+      return;
+    }
+
+
+    const emailPattern = /^[^\s@]+@alokind\.com$/;
+    if (!emailPattern.test(formData.email)) {
+      setError('Please enter a valid email address that ends with @alokind.com.');
+      return;
+    }
+
+
+    const mobPattern = /^\d{10}$/;
+    if (!mobPattern.test(formData.mob)) {
+      setError('Mobile number must be exactly 10 digits.');
+      return;
+    }
 
     if (isSubmitting) return;
 
