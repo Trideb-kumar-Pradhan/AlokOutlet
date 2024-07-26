@@ -63,15 +63,15 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
     }
 
     const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-    if (totalQuantity > 5) {
-      setError('You cannot buy more than 5 products in a day');
+    if (totalQuantity > 15) {
+      setError('You cannot buy more than 15 products in a day');
       return;
     }
  
     const empcodePattern = /^4\d{7}$/;
 
     if (!empcodePattern.test(formData.empcode)) {
-      setError('EMPCode must be start with 4.');
+      setError('EMPcode must start with 4 and not be larger than 8');
       return;
     }
 
