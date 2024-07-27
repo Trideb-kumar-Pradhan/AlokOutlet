@@ -1,0 +1,1 @@
+export const Reactapp = 'Design BY_Trideb';
