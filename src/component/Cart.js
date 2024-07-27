@@ -389,7 +389,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
       setFormData({ empcode: '', name: '', address: '', mob: '', email: '' });
       setSubmitDisabled(true);
     } catch (error) {
-      setError('Selected combination of Stock not Available Now !! Refresh the home screnn and check updated stock available for product');
+      setError('FAILED!!,Please wait for 5 Seconds to submit again or refresh the screen');
       console.error('Error:', error);
     } finally {
       setIsSubmitting(false);
@@ -406,7 +406,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
   return (
     <div>
     <Box sx={{ padding: '20px' }}>
-      <Typography variant="h4" gutterBottom>Carta1</Typography>
+      <Typography variant="h4" gutterBottom>Cart</Typography>
 
       {cart.length === 0 ? (
         <Typography variant="h6">Your cart is empty</Typography>
