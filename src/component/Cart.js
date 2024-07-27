@@ -360,7 +360,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
   
     try {
       // Check stock availability
-      const stockResponse = await axios.post('http://localhost:8000/check-stock', { cart: formattedCart });
+      const stockResponse = await axios.post('https://outletsp.onrender.com/check-stock', { cart: formattedCart });
       
       if (stockResponse.data.status === 'error') {
         setError(stockResponse.data.message);
@@ -368,7 +368,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
       }
   
       // Proceed to submit order
-      const response = await axios.post('http://localhost:8000/submit-order', {
+      const response = await axios.post('https://outletsp.onrender.com/submit-order', {
         ...formData,
         name: formattedName,
         address: formattedAddress,
@@ -406,7 +406,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
   return (
     <div>
     <Box sx={{ padding: '20px' }}>
-      <Typography variant="h4" gutterBottom>Cart</Typography>
+      <Typography variant="h4" gutterBottom>Carta</Typography>
 
       {cart.length === 0 ? (
         <Typography variant="h6">Your cart is empty</Typography>
