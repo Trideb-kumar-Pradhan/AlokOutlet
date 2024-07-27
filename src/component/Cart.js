@@ -406,7 +406,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
   return (
     <div>
     <Box sx={{ padding: '20px' }}>
-      <Typography variant="h4" gutterBottom>Carta</Typography>
+      <Typography variant="h4" gutterBottom>Carta1</Typography>
 
       {cart.length === 0 ? (
         <Typography variant="h6">Your cart is empty</Typography>
