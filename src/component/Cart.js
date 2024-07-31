@@ -321,17 +321,17 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
   
     const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
     if (totalQuantity > 15) {
-      setError('You cannot buy more than 15 products in a day');
+      setError('Total order quantity Should not exceed 15 items');
       return;
     }
   
     const empcodePattern = /^4\d{7}$/;
     if (!empcodePattern.test(formData.empcode)) {
-      setError('EMPcode must start with 4 and not be larger than 8');
+      setError('EMPcode should be 8 digit and begin with 4');
       return;
     }
   
-    const emailPattern = /^[^\s@]+@alokind\.com$/;
+    const emailPattern = /^[^\s@]+@gmail\.com$/;
     if (!emailPattern.test(formData.email)) {
       setError('Please enter a valid email address that ends with @alokind.com.');
       return;
@@ -414,9 +414,6 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
         <Box sx={{ marginBottom: '20px' }}>
           <Typography variant="h6" gutterBottom>Total Quantity: {totalQuantity}</Typography>
           <Typography variant="h5" gutterBottom>Total Price: ₹{totalPrice.toFixed(2)}</Typography>
-          <Typography variant="h6" style={{ fontSize: '14px', opacity: 0.5 }}>
-          Only one order request per day is applicable
-</Typography>
 
           <Divider sx={{ marginBottom: '10px' }} />
           <Grid container spacing={2}>

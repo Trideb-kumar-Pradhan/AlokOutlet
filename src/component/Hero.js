@@ -1,9 +1,12 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import heroImage from '../assets/Offer.jpg'; 
+import heroImage from '../assets/AB.png'; 
+import logo from '../assets/ad.png';
 
 const Hero = () => {
   return (
+    <div>
+ 
     <Box
       sx={{
         position: 'relative',
@@ -11,6 +14,7 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundColor:'none',
+        paddingTop:'36px',
         height: '70vh',
         // display: 'flex',
         // justifyContent: 'center',
@@ -42,6 +46,7 @@ const Hero = () => {
       </Box>
       
     </Box>
+    </div>
 
   );
 };
