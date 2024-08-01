@@ -61,53 +61,44 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundColor:'none',
-        paddingTop:'100px',
+        // paddingTop:'36px',
         // height: '',
         alignItems: 'center',
         marginBottom:'10px',
         '@media (min-width: 280px)': {
-          height: '1vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 320px)': {
-          height: '3vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 370px)': {
-          height: '5vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 400px)': {
-          height: '7vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 450px)': {
-          height: '9vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 500px)': {
-          height: '11vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 550px)': {
-          height: '13vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 600px)': {
-          height: '15vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 700px)': {
           height: '17vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 800px)': {
-          height: '19vh',  // Adjust height for smaller screens
+        '@media (min-width: 360px)': {
+          height: '22vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 850px)': {
-          height: '21vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 900px)': {
+        '@media (min-width: 370px)': {
           height: '23vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 950px)': {
+        '@media (min-width: 400px)': {
           height: '25vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 1000px)': {
-          height: '27vh',  // Adjust height for smaller screens
+        '@media (min-width: 450px)': {
+          height: '28vh',  // Adjust height for smaller screens
         },
-        '@media (max-width: 1054px)': {
+        '@media (min-width: 500px)': {
+          height: '30vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 550px)': {
+          height: '33vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 600px)': {
+          height: '36vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 700px)': {
+          height: '42vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 800px)': {
+          height: '49vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 870px)': {
+          height: '56vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 901px) and (max-width: 1024px)': {
           height: '70vh',  // Adjust height for medium screens
         },
       }}
