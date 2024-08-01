@@ -214,7 +214,7 @@ const ProductList = ({ products, addToCart }) => {
     return (
       <div>
     <Box sx={{ flexGrow: 1, padding: '15px' }}>
-      <Grid container spacing={6}>
+      <Grid container spacing={6} >
         {sortedProducts.map((product) => (
           <Grid item xs={12} sm={12} md={6} lg={4} key={product._id} style={{ marginTop: '17px' }}>
             <Card style={{  maxWidth: '400px', maxHeight: '600px',borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,4.1)', paddingBottom: '0px' }}>

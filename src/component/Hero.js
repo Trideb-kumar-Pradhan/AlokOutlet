@@ -66,40 +66,55 @@ const Hero = () => {
         alignItems: 'center',
         marginBottom:'10px',
         '@media (min-width: 280px)': {
-          height: '17vh',  // Adjust height for smaller screens
+          height: '1vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 320px)': {
+          height: '4vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 360px)': {
-          height: '22vh',  // Adjust height for smaller screens
+          height: '5vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 370px)': {
-          height: '23vh',  // Adjust height for smaller screens
+          height: '7vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 400px)': {
-          height: '25vh',  // Adjust height for smaller screens
+          height: '10vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 450px)': {
-          height: '28vh',  // Adjust height for smaller screens
+          height: '13vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 500px)': {
-          height: '30vh',  // Adjust height for smaller screens
+          height: '16vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 550px)': {
-          height: '33vh',  // Adjust height for smaller screens
+          height: '18vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 600px)': {
-          height: '36vh',  // Adjust height for smaller screens
+          height: '22vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 700px)': {
-          height: '42vh',  // Adjust height for smaller screens
+          height: '27vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 800px)': {
-          height: '49vh',  // Adjust height for smaller screens
+          height: '25vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 870px)': {
-          height: '56vh',  // Adjust height for smaller screens
+          height: '29vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 901px) and (max-width: 1024px)': {
-          height: '70vh',  // Adjust height for medium screens
+        '@media (min-width: 901px)': {
+          height: '39vh',  // Adjust height for medium screens
+        },
+        '@media (min-width: 1000px)': {
+          height: '45vh',  // Adjust height for medium screens
+        },
+        '@media (min-width: 1100px)': {
+          height: '49vh',  // Adjust height for medium screens
+        },
+        '@media (min-width: 1200px)': {
+          height: '54vh',  // Adjust height for medium screens
+        },
+        '@media (min-width: 1300px)': {
+          height: '59vh',  // Adjust height for medium screens
         },
       }}
     >
