@@ -28,7 +28,7 @@ const Navbar = () => {
         color: 'white',
         fontFamily: 'Arial, sans-serif',
         fontWeight: 'bold',
-        paddingLeft: '14px',
+        paddingLeft: '7px',
         letterSpacing: '0.1em',
         textShadow: '1px 1px 2px rgba(0, 0, 0, 0.9)',
         textTransform: 'uppercase',
