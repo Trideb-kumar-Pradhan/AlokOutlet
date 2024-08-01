@@ -65,6 +65,9 @@ const Hero = () => {
         // height: '',
         alignItems: 'center',
         marginBottom:'10px',
+        '@media (min-width: 280px)': {
+          height: '17vh',  // Adjust height for smaller screens
+        },
         '@media (min-width: 330px)': {
           height: '21vh',  // Adjust height for smaller screens
         },
@@ -95,11 +98,8 @@ const Hero = () => {
         '@media (min-width: 870px)': {
           height: '56vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 950px)': {
-          height: '62vh',  // Adjust height for smaller screens
-        },
-        '@media (min-width: 1000px) and (max-width: 1324px)': {
-          height: '67vh',  // Adjust height for medium screens
+        '@media (min-width: 901px) and (max-width: 1024px)': {
+          height: '70vh',  // Adjust height for medium screens
         },
       }}
     >
