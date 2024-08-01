@@ -68,7 +68,10 @@ const Hero = () => {
         '@media (max-width: 600px)': {
           height: '20vh',  // Adjust height for smaller screens
         },
-        '@media (min-width: 601px) and (max-width: 900px)': {
+        '@media (min-width: 600px) and (max-width: 799px)': {
+          height: '30vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 800px) and (max-width: 900px)': {
           height: '45vh',  // Adjust height for smaller screens
         },
         '@media (min-width: 901px) and (max-width: 1024px)': {
