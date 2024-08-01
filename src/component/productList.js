@@ -213,7 +213,7 @@ const ProductList = ({ products, addToCart }) => {
   }
     return (
       <div>
-    <Box sx={{ flexGrow: 1, padding: '20px' }}>
+    <Box sx={{ flexGrow: 1, padding: '15px' }}>
       <Grid container spacing={6}>
         {sortedProducts.map((product) => (
           <Grid item xs={12} sm={12} md={6} lg={4} key={product._id} style={{ marginTop: '17px' }}>

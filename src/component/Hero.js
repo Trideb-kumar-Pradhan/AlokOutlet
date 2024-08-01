@@ -50,7 +50,7 @@
 
 import React from 'react';
 import { Box } from '@mui/material';
-import heroImage from '../assets/XY.png';
+import heroImage from '../assets/Offer3.jpg';
 
 const Hero = () => {
   return (
@@ -61,7 +61,7 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundColor:'none',
-        // paddingTop:'36px',
+        paddingTop:'99px',
         // height: '',
         alignItems: 'center',
         marginBottom:'10px',
