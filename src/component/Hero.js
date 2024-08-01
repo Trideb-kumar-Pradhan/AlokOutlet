@@ -1,12 +1,59 @@
+// import React from 'react';
+// import { Box, Typography, Button } from '@mui/material';
+// import heroImage from '../assets/AB.png'; 
+
+// const Hero = () => {
+//   return (
+//     <div>
+ 
+//     <Box
+//       sx={{
+//         position: 'relative',
+//         backgroundImage: `url(${heroImage})`,
+//         backgroundSize: 'cover',
+//         backgroundPosition: 'center',
+//         backgroundColor:'none',
+//         paddingTop:'36px',
+//         height: '70vh',
+//         alignItems: 'center',
+//         marginBottom:'10px'
+//       }}
+//     >
+//       <Box
+//         sx={{
+//           position: 'absolute',
+//           top: 0,
+//           left: 0,
+//           width: '100%',
+//           height: '100%',
+//           zIndex: 1,
+//         }}
+//       />
+//       <Box
+//         sx={{
+//           position: 'relative',
+//           zIndex: 2,
+//           textAlign: 'center',
+//           padding: '20px',
+//         }}
+//       >
+
+//       </Box>
+      
+//     </Box>
+//     </div>
+
+//   );
+// };
+
+// export default Hero;
+
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import heroImage from '../assets/AB.png'; 
-import logo from '../assets/ad.png';
+import { Box } from '@mui/material';
+import heroImage from '../assets/XY.png';
 
 const Hero = () => {
   return (
-    <div>
- 
     <Box
       sx={{
         position: 'relative',
@@ -14,26 +61,21 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundColor:'none',
-        paddingTop:'36px',
+        // paddingTop:'36px',
         height: '70vh',
-        // display: 'flex',
-        // justifyContent: 'center',
         alignItems: 'center',
-        // color: 'white',
-        // textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-        marginBottom:'10px'
+        marginBottom:'10px',
+        '@media (max-width: 600px)': {
+          height: '20vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 601px) and (max-width: 900px)': {
+          height: '45vh',  // Adjust height for smaller screens
+        },
+        '@media (min-width: 901px) and (max-width: 1024px)': {
+          height: '70vh',  // Adjust height for medium screens
+        },
       }}
     >
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 1,
-        }}
-      />
       <Box
         sx={{
           position: 'relative',
@@ -42,12 +84,9 @@ const Hero = () => {
           padding: '20px',
         }}
       >
-
+        {/* Content goes here */}
       </Box>
-      
     </Box>
-    </div>
-
   );
 };
 

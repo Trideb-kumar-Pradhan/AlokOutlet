@@ -139,9 +139,10 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { Grid, Card, CardContent, Typography, CardMedia, Button, Box, Dialog, DialogContent, DialogActions, IconButton, Tooltip } from '@mui/material';
+import { Grid, Card, CardContent, Typography, CardMedia, Button, Box, Dialog, DialogContent, DialogActions, IconButton, Tooltip  } from '@mui/material';
 import PaletteIcon from '@mui/icons-material/Palette'; 
 import { styled } from '@mui/material/styles';
+import NotificationsIcon from '@mui/icons-material/Notifications'; 
 import LoadingSpinner from './LoadingSpinner'; 
 
 
@@ -216,14 +217,14 @@ const ProductList = ({ products, addToCart }) => {
       <Grid container spacing={3}>
         {sortedProducts.map((product) => (
           <Grid item xs={12} sm={12} md={6} lg={4} key={product._id} style={{ marginTop: '15px' }}>
-            <Card style={{ margin: '7px', maxWidth: '400px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,4.1)', paddingBottom: '0px' }}>
+            <Card style={{ margin: '7px', maxWidth: '400px', maxHeight: '600px',borderRadius: '10px', boxShadow: '0 4px 8px rgba(0,0,0,4.1)', paddingBottom: '0px' }}>
               <CardMedia
                 component="img"
-                height="100%"
+                height="300px"
                 width="100%"
                 src={`https://outletsp.onrender.com/images/${product.image}`} // Image URL from backend
                 alt={product.name}
-                style={{ objectFit: 'cover', cursor: 'pointer' }}
+                style={{ objectFit: 'cover', cursor: 'pointer',display: 'block',  maxWidth: '100%',  }}
                 onClick={() => handleImageClick(`https://outletsp.onrender.com/images/${product.image}`)}
               />
               <CardContent sx={{ justifyContent: 'center', display: 'flex', flexDirection: 'column', paddingLeft: '10px', paddingTop: '0px' }}>
@@ -231,11 +232,17 @@ const ProductList = ({ products, addToCart }) => {
                   <Typography variant="h4" style={{ color: 'red', fontFamily: 'Times New Roman', fontWeight: 'bold', fontSize: '23px', lineHeight: '1.8' }}>
                     {product.name}
                   </Typography>
-                  {/* <Tooltip title="Only for Alok employees">
+                  {/* <Tooltip title="Multiple color options available">
                   <IconButton style={{ cursor: 'pointer', color: 'grey', opacity: 0.3 }}>
                       <NotificationsIcon />
                     </IconButton>
                   </Tooltip> */}
+                                     <Tooltip title="Multiple color options available">
+                     <IconButton>
+                       <GradientSvg /> 
+                       <GradientIcon />
+                     </IconButton>
+                   </Tooltip>
                 </div>
                 <Typography variant="h5" style={{ color: 'black', fontFamily: 'Times New Roman', fontWeight: 'bold', fontSize: '16px', lineHeight: '1.5' }}>{product.tc}</Typography>
                 <Typography variant="h5" style={{ color: 'black', fontFamily: 'Times New Roman', fontWeight: 'bold', fontSize: '16px', lineHeight: '1.5' }}>{product.pdes}</Typography>
@@ -247,7 +254,7 @@ const ProductList = ({ products, addToCart }) => {
                   <span style={{ fontWeight: 'bold', fontSize: '22px' }}> {product.price.toFixed(2)} </span>
                 </Typography>
                 <Typography  variant="body2">Stock: <span style={{ fontWeight: 'bold', fontSize: '18px' }}> {product.stock} </span></Typography>
-                <Typography variant="h6" style={{ fontSize: '14px', opacity: 0.7 }}>
+                {/* <Typography variant="h6" style={{ fontSize: '14px', opacity: 0.7 }}>
                    <Tooltip title="">
                      <IconButton>
                        <GradientSvg /> 
@@ -255,7 +262,7 @@ const ProductList = ({ products, addToCart }) => {
                      </IconButton>
                    </Tooltip>
                    Multiple color options available
-                 </Typography>
+                 </Typography> */}
                 <Button
                   style={{ backgroundColor: product.stock > 0 ? 'rgb(255, 102, 0)' : 'gray', color: 'white' }}
                   onClick={() => handleAddToCart(product)}
