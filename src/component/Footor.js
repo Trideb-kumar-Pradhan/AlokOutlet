@@ -90,7 +90,7 @@ const Footer = () => {
       }}
     >
       <Typography variant="body1">
-        &copy; {new Date().getFullYear()} Alok Industries Pvt Ltd
+        &copy; {new Date().getFullYear()} Alok Industries  Ltd
       </Typography>
       <Typography variant="body2">
         <Link href="#" color="inherit">
