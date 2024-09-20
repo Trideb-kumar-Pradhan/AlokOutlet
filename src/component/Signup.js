@@ -67,7 +67,7 @@ const Signup = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/signup', { username, password, deptname });
+            await axios.post('https://outletsp.onrender.com/signup', { username, password, deptname });
             setSuccessMessage("Signup successful! You can now log in.");
             setUsername('');
             setPassword('');

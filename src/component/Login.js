@@ -58,7 +58,7 @@ const Login = ({ setToken }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/login', { username, password });
+            const response = await axios.post('https://outletsp.onrender.com/login', { username, password });
             console.log(response.data);
             setToken(response.data.token);
             setUsername('');
