@@ -180,13 +180,13 @@ const Hero = () => {
     <Box
       sx={{
         position: 'relative',
-        // height: '70vh',
-        height: {
-          xs: '20vh', // For extra-small screens (mobile)
-          sm: '50vh', // For small screens (tablets)
-          md: '70vh', // For medium screens (desktops)
-          lg: '75vh', // For large screens
-        },
+        height: '70vh',
+        // height: {
+        //   xs: '20vh', // For extra-small screens (mobile)
+        //   sm: '50vh', // For small screens (tablets)
+        //   md: '70vh', // For medium screens (desktops)
+        //   lg: '75vh', // For large screens
+        // },
         width: '100%',
         overflow: 'hidden',
       }}
