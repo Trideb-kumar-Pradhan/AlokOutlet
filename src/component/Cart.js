@@ -398,7 +398,7 @@ const Cart = ({ cart = [], removeFromCart, addToCart, submitOrder }) => {
       // Reload page after a short delay to show success message
       setTimeout(() => {
         setOrderSubmitted(false);
-        window.location.href = '/'; // Redirect to home page
+        window.location.href = '/home'; // Redirect to home page
       }, 3000);
   
       // Reset form and disable submit button

@@ -44,15 +44,19 @@
 // };
 
 // export default Login;
+
 import React, { useState } from 'react';
 import axios from 'axios';
-import { TextField, Typography} from '@mui/material';
+import Snackbar from '@mui/material/Snackbar'; // Import Snackbar
+import MuiAlert from '@mui/material/Alert'; // Import Alert for Snackbar
 import { useNavigate } from 'react-router-dom';
-import { Margin } from '@mui/icons-material';
 
 const Login = ({ setToken }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+    const [snackbarSeverity, setSnackbarSeverity] = useState(''); // 'success' or 'error'
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
@@ -66,17 +70,32 @@ const Login = ({ setToken }) => {
             navigate('/home');
         } catch (error) {
             console.error(error);
-            alert("Invalid credentials");
+            setSnackbarMessage("Invalid credentials");
+            setSnackbarSeverity('error'); // Set severity to 'error'
+            setSnackbarOpen(true); // Open the Snackbar
         }
+    };
+
+    const handleSnackbarClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setSnackbarOpen(false);
     };
 
     return (
         <div style={styles.container}>
-            
-            <form onSubmit={handleLogin} style={{...styles.form , display: 'flex',
-        justifyContent: 'center',flexDirection:'column',
-        alignItems: 'center'}}>
-            <h1>hello</h1>
+            <form 
+                onSubmit={handleLogin} 
+                style={{
+                    ...styles.form,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                }}
+            >
+                <h1>Login <span style={{color:'#F99000'}}>Outlet</span></h1>
                 <input 
                     type="text" 
                     placeholder="Username" 
@@ -92,11 +111,27 @@ const Login = ({ setToken }) => {
                     style={styles.input}
                 />
                 <button className="submit" type="submit" style={styles.button}>Login</button>
-
-                <p >
-          Don't have an account? <a href="/signup">Signup now</a></p>
-
+                <p>Don't have an account? <a href="/signup">Signup now</a></p>
             </form>
+
+            <Snackbar 
+                open={snackbarOpen} 
+                autoHideDuration={6000} 
+                onClose={handleSnackbarClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} // Corrected to 'bottom'
+            >
+                <MuiAlert 
+                    onClose={handleSnackbarClose} 
+                    severity={snackbarSeverity} 
+                    sx={{ 
+                        width: '100%', 
+                        backgroundColor: snackbarSeverity === 'success' ? '#00B74A' : '#F44336', // Change color based on severity
+                        color: 'white' // Text color
+                    }} 
+                >
+                    {snackbarMessage}
+                </MuiAlert>
+            </Snackbar>
         </div>
     );
 };
