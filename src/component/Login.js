@@ -142,7 +142,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: '105vh',
-        margin: '-100px',
+        // margin: '-100px',
         backgroundColor: '#f0f0f0',
     },
     form: {

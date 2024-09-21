@@ -159,7 +159,7 @@
 //     },
 // };
 
-// export default Signup;
+// export default Signup;   
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -280,7 +280,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: '105vh',
-        margin: '-100px',
+        // margin: '-100px',
         backgroundColor: '#f0f0f0',
     },
     form: {

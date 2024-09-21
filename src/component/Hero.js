@@ -171,49 +171,6 @@
 // };
 
 // export default Hero;
-// import React from 'react';
-// import { Box } from '@mui/material';
-// import heroImage from '../assets/ABG.png';
-
-// const Hero = () => {
-//   return (
-//     <Box
-//       sx={{
-//         position: 'relative',
-//         height: '75vh',
-//         width: '100%',
-//         overflow: 'hidden',
-//       }}
-//     >
-//       <img 
-//         src={heroImage} 
-//         alt="Hero" 
-//         style={{
-//           position: 'absolute',
-//           top: '50%',
-//           left: '50%',
-//           width: '100%',
-//           height: 'auto', // Adjust height automatically to maintain aspect ratio
-//           transform: 'translate(-50%, -50%)', // Center the image
-//           objectFit: 'cover', // Ensures the image covers the area
-//         }} 
-//       />
-//       <Box
-//         sx={{
-//           position: 'relative',
-//           zIndex: 2,
-//           textAlign: 'center',
-//           color: 'white', // Change text color for visibility
-//         }}
-//       >
-//         {/* Content goes here */}
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Hero;
-
 import React from 'react';
 import { Box } from '@mui/material';
 import heroImage from '../assets/ABG.png';
@@ -223,12 +180,7 @@ const Hero = () => {
     <Box
       sx={{
         position: 'relative',
-        height: {
-          xs: '20vh', // For extra-small screens (mobile)
-          sm: '50vh', // For small screens (tablets)
-          md: '65vh', // For medium screens (desktops)
-          lg: '75vh', // For large screens
-        },
+        height: '70vh',
         width: '100%',
         overflow: 'hidden',
       }}
@@ -261,3 +213,51 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// import React from 'react';
+// import { Box } from '@mui/material';
+// import heroImage from '../assets/ABG.png';
+
+// const Hero = () => {
+//   return (
+//     <Box
+//       sx={{
+//         position: 'relative',
+//         height: {
+//           xs: '20vh', // For extra-small screens (mobile)
+//           sm: '50vh', // For small screens (tablets)
+//           md: '65vh', // For medium screens (desktops)
+//           lg: '75vh', // For large screens
+//         },
+//         width: '100%',
+//         overflow: 'hidden',
+//       }}
+//     >
+//       <img 
+//         src={heroImage} 
+//         alt="Hero" 
+//         style={{
+//           position: 'absolute',
+//           top: '50%',
+//           left: '50%',
+//           width: '100%',
+//           height: 'auto', // Adjust height automatically to maintain aspect ratio
+//           transform: 'translate(-50%, -50%)', // Center the image
+//           objectFit: 'cover', // Ensures the image covers the area
+//         }} 
+//       />
+//       <Box
+//         sx={{
+//           position: 'relative',
+//           zIndex: 2,
+//           textAlign: 'center',
+//           color: 'white', // Change text color for visibility
+//         }}
+//       >
+//         {/* Content goes here */}
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default Hero;
