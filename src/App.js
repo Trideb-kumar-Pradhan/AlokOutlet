@@ -572,6 +572,8 @@ function App() {
           {/* Unprotected routes */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login setToken={setToken} />} />
+          <Route path="/" element={<Hero />}/>
+
         </Routes>
       </Container>
       <Footer />
