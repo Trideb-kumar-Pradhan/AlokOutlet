@@ -215,6 +215,7 @@ const Signup = () => {
     };
 
     return (
+        <div style={{ marginTop: '20px'}}>
         <div style={styles.container}>
             <form onSubmit={handleSignup} style={{...styles.form, display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <h1>Signup <span style={{color:'#F99000'}}>Outlet</span></h1>
@@ -271,6 +272,7 @@ const Signup = () => {
                 </MuiAlert>
             </Snackbar>
         </div>
+        </div>
     );
 };
 
@@ -279,7 +281,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
+        height: '80vh',
         // margin: '-100px',
         backgroundColor: '#f0f0f0',
     },

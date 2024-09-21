@@ -284,8 +284,8 @@ const Navbar = ({ setToken, token }) => {
 
   return (
     <>
-      <AppBar position="static">
-        <Toolbar style={{ backgroundColor: '#F98129' }}>
+      <AppBar position="static" >
+        <Toolbar style={{ backgroundColor: '#F98129'}}>
           <Typography
             variant="h6"
             sx={{
@@ -297,6 +297,7 @@ const Navbar = ({ setToken, token }) => {
               letterSpacing: '0.1em',
               textShadow: '1px 1px 2px rgba(0, 0, 0, 0.9)',
               textTransform: 'uppercase',
+              
               fontSize: {
                 xs: '1.2rem',
                 sm: '1.4rem',

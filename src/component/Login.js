@@ -84,7 +84,8 @@ const Login = ({ setToken }) => {
     };
 
     return (
-        <div style={styles.container}>
+        <div style={{ marginTop: '20px'}}>
+        <div style={styles.container }>
             <form 
                 onSubmit={handleLogin} 
                 style={{
@@ -133,16 +134,23 @@ const Login = ({ setToken }) => {
                 </MuiAlert>
             </Snackbar>
         </div>
+         </div>
     );
 };
 
 const styles = {
+    // root: {
+    //     // padding: '110px', // Remove default padding
+    //     // margin: 0, // Remove default margin
+    //   },
+    
     container: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh',
-        // margin: '-100px',
+        height: '80vh',
+        // width:'100vw',
+        // margin: '-150px',
         backgroundColor: '#f0f0f0',
     },
     form: {

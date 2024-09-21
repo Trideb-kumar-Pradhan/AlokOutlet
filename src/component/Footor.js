@@ -83,7 +83,7 @@ const Footer = () => {
       sx={{
         backgroundColor: 'black',
         color: 'white',
-        padding: '10px 3px ',
+        padding: '10px 0px ',
         marginTop: '20px',
         textAlign: 'center',
         width: '100%'

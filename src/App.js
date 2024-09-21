@@ -464,6 +464,7 @@ import Footer from './component/Footor';
 import Signup from './component/Signup';
 import Login from './component/Login';
 import axios from 'axios';
+import { Padding } from '@mui/icons-material';
 
 function App() {
   const [token, setToken] = useState(null);
@@ -546,7 +547,8 @@ function App() {
   return (
     <Router>
       <Navbar setToken={setToken} token={token} />
-      <Container>
+      <Container style={{ padding: '0'}}>
+      {/* <Container sx={{ padding: 0 }}> */}
         <Routes>
           <Route 
             path="/home" 
