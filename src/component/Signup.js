@@ -279,7 +279,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '105vh',
+        height: '100vh',
         // margin: '-100px',
         backgroundColor: '#f0f0f0',
     },
